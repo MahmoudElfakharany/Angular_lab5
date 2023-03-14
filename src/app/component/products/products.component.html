@@ -1,0 +1,15 @@
+<div class="">
+    <div class=" p-2 text-dark fw-bold text-center fs-1 rounded mb-1">
+      Choose Your Wand!
+    </div>
+    <div class=" container p-3 text-light text-center bg-secondary mt-2 rounded">
+        <div class="row h-100 justify-content-center align-items-center">
+          <app-card
+            class="col mb-3 ps-3 text-dark"
+            *ngFor="let product of productsList"
+            [ThisProduct]="product"
+          ></app-card>
+      </div>
+    </div>
+  </div>
+  

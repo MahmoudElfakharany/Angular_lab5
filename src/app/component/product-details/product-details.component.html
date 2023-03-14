@@ -1,0 +1,24 @@
+<div class="bg-dark mt-5 p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img [src]="thisProduct?.imgUrl" alt="" />
+      </div>
+      <div class="col-sm-6 text-center text-light lead">
+        <h3 class="text-danger">
+          {{ thisProduct?.productName }}
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
+          ipsam harum ipsum ex soluta delectus vero, at cumque optio officia
+          facilis fugit doloremque magni eveniet inventore dicta modi laudantium
+          voluptatibus.
+        </p>
+        <p>{{ thisProduct?.price }}</p>
+        <button [routerLink]="['/products']" class="btn btn-warning mt-3">
+          Back To Products
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

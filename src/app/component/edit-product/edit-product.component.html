@@ -1,0 +1,77 @@
+<div class="container mt-5 col-6">
+  <form [formGroup]="editForm" (submit)="submitEdit($event)">
+    <div class="mb-3">
+      <label for="Pid" class="form-label">Product ID</label>
+      <input
+        formControlName="inputID"
+        type="text"
+        class="form-control"
+        id="Pid"
+      />
+      <p *ngIf="getid.hasError('required')" class="text-danger fs-6">
+        id is required
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <label for="Pname" class="form-label">Product Name</label>
+      <input
+        formControlName="inputName"
+        type="text"
+        class="form-control"
+        id="Pname"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <p *ngIf="getname.hasError('required')" class="text-danger fs-6">
+      Name is required
+    </p>
+    <p *ngIf="getname.hasError('minlength')" class="text-danger fs-6">
+      Name must be at least 3 chars
+    </p>
+
+    <div class="mb-3">
+      <label for="Pprice" class="form-label">Product Price</label>
+      <input
+        formControlName="inputPrice"
+        type="text"
+        class="form-control"
+        id="Pprice"
+      />
+      <p *ngIf="getprice.hasError('required')" class="text-danger fs-6">
+        price is required
+      </p>
+      <p *ngIf="getprice.hasError('min')" class="text-danger fs-6">
+        price can't be less than 20
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <label for="Pimg" class="form-label">Product Image</label>
+      <input
+        formControlName="inputImg"
+        type="text"
+        class="form-control"
+        id="Pimg"
+      />
+      <p *ngIf="getimg.hasError('required')" class="text-danger fs-6">
+        img url is required
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <label for="Pquantity" class="form-label">Product quantity</label>
+      <input
+        formControlName="inputQuantity"
+        type="text"
+        class="form-control"
+        id="Pquantity"
+      />
+      <p *ngIf="getquantity.hasError('required')" class="text-danger fs-6">
+        Quantity is required
+      </p>
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{productID? "Edit":"Add"}}</button>
+  </form>
+</div>
